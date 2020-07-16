@@ -1,13 +1,13 @@
 # https://www.acmicpc.net/problem/2012
 n = int(input())
-temp = []
-count = 0
+arr = []
+result = 0
 for _ in range(n):
-    temp.append(int(input()))
-temp.sort()
+    temp = int(input())
+    arr.append(temp)
+arr.sort()
 
 for i in range(n):
-    count += abs(temp[i]-(i+1))
+    result += abs((i + 1) - arr[i])
 
-print(count)
-
+print(result)
